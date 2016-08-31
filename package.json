@@ -1,0 +1,40 @@
+{
+    "name": "mongoose-error",
+    "main": "index.js",
+    "version": "0.0.2",
+    "description": "Small Node.js utility to normalize and handle mongoose errors",
+    "author": "GitBook Team <contact@gitbook.com>",
+    "homepage": "https://github.com/GitbookIO/node-mongoose-error",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/GitbookIO/node-mongoose-error.git"
+    },
+    "bugs": {
+        "url": "https://github.com/GitbookIO/node-mongoose-error/issues"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "engines": {
+        "node": "6.4.0",
+        "npm": "3.10.3"
+    },
+    "keywords": [
+        "mongoose",
+        "error"
+    ],
+    "license": "Apache-2.0",
+    "contributors": [
+    {
+      "name": "Johan Preynat",
+      "email": "johan@gitbook.com"
+    }
+    ],
+    "dependencies": {
+        "http-errors": "^1.5.0",
+        "mongo-errors": "^1.0.1"
+    },
+    "devDependencies": {
+        "eslint": "^3.4.0"
+    }
+}

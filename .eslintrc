@@ -1,0 +1,46 @@
+{
+    "rules": {
+        // Use indentation of 4 spaces
+        "indent": [ 2, 4 ],
+
+        // File should end with a new line
+        "eol-last": 2,
+
+        // No extra whitespaces at the end of lines
+        "no-trailing-spaces": 2,
+
+        // Use single quotes
+        "quotes": [ 2, "single" ],
+
+        // Use unix line break (\n and not \r\n)
+        "linebreak-style": [ 2, "unix" ],
+
+        // Require object shorthand (see spec/object-shorthand.js)
+        "object-shorthand": [ 2, "always" ],
+
+        // Always end lines with semi-colons
+        "semi": [ 2, "always" ],
+
+        // Dont accept unused variables
+        "no-unused-vars": [ 2, {
+            "vars": "all",
+            "args": "none"
+        } ],
+
+        "no-extra-boolean-cast": [ OFF ],
+        "spaced-comment": [ 2, "always" ],
+
+        // ES6
+        "no-var":               2,
+        "no-void":              2,
+        "prefer-spread":        2,
+        "no-useless-call":      2,
+        "no-use-before-define": [ 2, { "functions": false } ],
+        "prefer-const":         [ 2, { "destructuring": "all" } ]
+    },
+    "env": {
+        "node": true,
+        "es6": true
+    },
+    "extends": "eslint:recommended"
+}
