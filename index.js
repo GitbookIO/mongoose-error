@@ -1,5 +1,6 @@
 const createError = require('http-errors');
 const mongoErrors = require('mongo-errors');
+const mongoose = require('mongoose');
 
 /**
  * Normalize <errArg> to an <http-errors> if <errorCode> matches the <mongo-errors> code <errorName>
@@ -57,6 +58,11 @@ function findMongoError(errorCode, errorName, errArg) {
  * @return {Error}       The normalized error
  */
 module.exports = (err, opts) => {
+    // Ignore error that doesn't come from mongoose
+    if (!(err instanceof mongoose.Error)) {
+        return err;
+    }
+
     // Default options
     opts = opts || {};
 

@@ -13,7 +13,7 @@
         "url": "https://github.com/GitbookIO/mongoose-error/issues"
     },
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "mocha ./test.js"
     },
     "keywords": [
         "mongoose",
@@ -21,16 +21,23 @@
     ],
     "license": "Apache-2.0",
     "contributors": [
-    {
-      "name": "Johan Preynat",
-      "email": "johan@gitbook.com"
-    }
+        {
+            "name": "Johan Preynat",
+            "email": "johan@gitbook.com"
+        }
     ],
     "dependencies": {
         "http-errors": "^1.5.0",
         "mongo-errors": "^1.0.1"
     },
     "devDependencies": {
-        "eslint": "^3.4.0"
+        "eslint": "^3.4.0",
+        "eslint-config-gitbook": "^1.5.0",
+        "expect": "^1.20.2",
+        "mocha": "^3.2.0",
+        "mongoose": "^4.8.1"
+    },
+    "peerDependencies": {
+        "mongoose": "*"
     }
 }
