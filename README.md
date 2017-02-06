@@ -1,5 +1,8 @@
 # mongoose-error
 
+[![NPM version](https://badge.fury.io/js/mongoose-error.svg)](http://badge.fury.io/js/mongoose-error)
+[![Linux Build Status](https://travis-ci.org/GitbookIO/mongoose-error.svg?branch=master)](https://travis-ci.org/GitbookIO/mongoose-error)
+
 Small Node.js utility to normalize mongoose errors.
 
 ### Installation
