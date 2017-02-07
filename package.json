@@ -1,7 +1,7 @@
 {
     "name": "mongoose-error",
     "main": "index.js",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Small Node.js utility to normalize and handle mongoose errors",
     "author": "GitBook Team <contact@gitbook.com>",
     "homepage": "https://github.com/GitbookIO/mongoose-error",
