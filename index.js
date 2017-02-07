@@ -1,6 +1,7 @@
 const createError = require('http-errors');
 const mongoErrors = require('mongo-errors');
 const mongoose = require('mongoose');
+const MongoError = require('mongodb-core').MongoError;
 
 /**
  * Normalize <errArg> to an <http-errors> if <errorCode> matches the <mongo-errors> code <errorName>
@@ -46,6 +47,19 @@ function findMongoError(errorCode, errorName, errArg) {
 }
 
 /**
+ * Return true if an error is from mongo or mongoose.
+ * @param {Error} error
+ * @return {Boolean}
+ */
+function isMongoError(error) {
+    return (
+        (error instanceof mongoose.Error) ||
+        (error instanceof MongoError) ||
+        (error.name == 'MongoError')
+    );
+}
+
+/**
  * Normalize the <err> mongoose error
  * User can pass an optional <opts> hash containing <mongo-errors> formatted names
  * to add details to the normalized error. It can either be a:
@@ -59,7 +73,7 @@ function findMongoError(errorCode, errorName, errArg) {
  */
 module.exports = (err, opts) => {
     // Ignore error that doesn't come from mongoose
-    if (!(err instanceof mongoose.Error)) {
+    if (!isMongoError(err)) {
         return err;
     }
 
